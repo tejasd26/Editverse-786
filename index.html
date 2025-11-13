@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EditVerse - Transforming Ordinary Shots into Visual Magic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <h1 class="logo-reveal">EditVerse</h1>
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <div class="nav-container">
+      <div class="logo">EditVerse</div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li class="dropdown">
+          <a href="#projects" class="nav-link">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="#photo-edits">Photo Edits</a></li>
+            <li><a href="#video-edits">Video Edits</a></li>
+            <li><a href="#color-grading">Color Grading</a></li>
+          </ul>
+        </li>
+        <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-close" id="mobile-close">&times;</div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#photo-edits" class="mobile-link sub-link">Photo Edits</a></li>
+      <li><a href="#video-edits" class="mobile-link sub-link">Video Edits</a></li>
+      <li><a href="#color-grading" class="mobile-link sub-link">Color Grading</a></li>
+      <li><a href="#tutorials" class="mobile-link">Tutorials</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HOME PAGE -->
+    <section id="home" class="page active-page">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-bg">
+          <img src="main page bg.webp" alt="background">
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Transforming Ordinary Shots into Visual Magic</h1>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View Transformations</a>
+            <a href="#services" class="btn btn-secondary">Hire Me for Editing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Work Section -->
+      <div class="featured-section">
+        <div class="container">
+          <h2 class="section-title">Featured Transformations</h2>
+          <div class="featured-grid">
+            <div class="featured-card" data-category="photo">
+              <div class="featured-image">
+                <img src="portraiit.jpg" alt="portrait">
+              </div>
+              <div class="featured-overlay">
+                <p class="featured-text">View Project</p>
+              </div>
+              <div class="featured-info">
+                <h3>Portrait Retouch</h3>
+                <p>Professional skin retouching with natural results</p>
+              </div>
+            </div>
+
+            <div class="featured-card" data-category="video">
+              <div class="featured-image">
+                <img src="travel reel.webp.jpg" alt="fashion portait">
+              </img>
+              </div>
+              <div class="featured-overlay">
+                <p class="featured-text">View Project</p>
+              </div>
+              <div class="featured-info">
+                <h3>Travel Reel Edit</h3>
+                <p>Dynamic cuts and motion graphics for Instagram</p>
+              </div>
+            </div>
+
+            <div class="featured-card" data-category="color">
+              <div class="featured-image">
+               <img src="sunset grading.webp.jpg" alt="sunset grading">
+              </div>
+              <div class="featured-overlay">
+                <p class="featured-text">View Project</p>
+              </div>
+              <div class="featured-info">
+                <h3>Sunset Grading</h3>
+                <p>Warm cinematic color grade for golden hour footage</p>
+              </div>
+            </div>
+
+            <div class="featured-card" data-category="photo">
+              <div class="featured-image">
+               <img src="product photography.webp.jpg" alt="product photography">
+              </div>
+              <div class="featured-overlay">
+                <p class="featured-text">View Project</p>
+              </div>
+              <div class="featured-info">
+                <h3>Product Photography</h3>
+                <p>Clean product shots with perfect lighting</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PAGE -->
+    <section id="projects" class="page">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="photo">Photo</button>
+          <button class="filter-btn" data-filter="video">Video</button>
+          <button class="filter-btn" data-filter="color">Color Grading</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO EDITS PAGE -->
+    <section id="photo-edits" class="page">
+      <div class="container">
+        <h2 class="section-title">Photo Edits</h2>
+        <p class="section-subtitle">Professional retouching and enhancement</p>
+        <div class="photo-gallery">
+          <div class="photo-item" data-photo="1">
+           <img src="PORTAITS 1.jpg" alt="fashion portait">
+          </div>
+          <div class="photo-item" data-photo="2">
+           <img src="PORTAITS 3.jpg" alt="portait">
+          </div>
+          <div class="photo-item" data-photo="3">
+            <img src="PORTAITS 2.jpg" alt="portait">
+          </div>
+          <div class="photo-item" data-photo="4">
+            <img src="PORTAITS 4.jpg" alt="portait">
+        </div>
+        <div class="photo-item" data-photo="5">
+          <img src="PORTAITS 5.jpg" alt="portait">
+        </div>
+        <div class="photo-item" data-photo="6">
+          <img src="PORTAITS 6.jpg" alt="portait">
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO EDITS PAGE -->
+    <section id="video-edits" class="page">
+      <div class="container">
+        <h2 class="section-title">Video Edits</h2>
+        <p class="section-subtitle">From raw footage to polished reels</p>
+        <div class="video-gallery">
+          <div class="video-item" data-video="1">
+            <img src="travel montage.jpg" alt="travel montage">
+            <div class="video-badge">Click to Compare</div>
+          </div>
+          <div class="video-item" data-video="2">
+           <img src="brand commercial.jpg" alt="brand commercial">
+            <div class="video-badge">Click to Compare</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOR GRADING PAGE -->
+    <section id="color-grading" class="page">
+      <div class="container">
+        <h2 class="section-title">Color Grading</h2>
+        <p class="section-subtitle">Cinematic transformations - hover to reveal original</p>
+        <div class="grading-gallery">
+          <div class="grading-item">
+            <div class="grading-before">
+             <img src="COLOR GRADE 1 BEFORE.jpg" alt="COLOR GRADE 1 BEFORE">
+             <img src="COLOR GRADE 1 AFTER.jpg" alt="COLOR GRADE 1 AFTER">
+            </div>
+            <div class="grading-after">
+             <img src="COLOR GRADE 1 AFTER.jpg" alt="COLOR GRADE 1 AFTER">
+            </div>
+            <div class="grading-label">Moody Portrait - Teal &amp; Orange Grade</div>
+            <div class="hover-hint">Hover to see original</div>
+          </div>
+
+          <div class="grading-item">
+            <div class="grading-before">
+             <img src="COLOR GRADE 2 BEFORE.jpg" alt="COLOR GRADE 2 BEFORE">
+            </div>
+            <div class="grading-after">
+             <img src="COLOR GRADE 2 AFTER.jpg" alt="COLOR GRADE 2 AFTER">
+            </div>
+            <div class="grading-label">Golden Hour Footage - Warm Romantic Grade</div>
+            <div class="hover-hint">Hover to see original</div>
+          </div>
+
+          <div class="grading-item">
+            <div class="grading-before">
+             <img src="COLOR GRADE 3 BEFORE.jpg" alt="COLOR GRADE 3 BEFORE">
+            </div>
+            <div class="grading-after">
+              <img src="COLOR GRADE 3 AFTER.jpg" alt="COLOR GRADE 3 AFTER">
+            </div>
+            <div class="grading-label">Urban Nightscape - Cyberpunk Neon Grade</div>
+            <div class="hover-hint">Hover to see original</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUTORIALS PAGE -->
+    <section id="tutorials" class="page">
+      <div class="container">
+        <h2 class="section-title">Behind the Edit</h2>
+        <p class="section-subtitle">Learn professional editing techniques</p>
+        <div class="tutorials-list">
+          <div class="tutorial-card" data-tutorial="1">
+            <div class="tutorial-thumbnail">
+              <div class="video-placeholder">
+                <video src="Color Grade Any Video in 15 Minutes – DaVinci Resolve Masterclass _ Full Beginner Series – Part 5.mp4" controls playsinline preload="metadata"></video>
+              </div>
+            </div>
+            <div class="tutorial-content">
+              <h3>Creating Cinematic Color Grades</h3>
+              <p>Learn the fundamentals of color grading to achieve film-quality visuals</p>
+              <button class="btn btn-sm">Read More</button>
+            </div>
+          </div>
+
+          <div class="tutorial-card" data-tutorial="2">
+            <div class="tutorial-thumbnail">
+              <div class="video-placeholder">
+                <video src="mastering skin retouch.mp4" controls playsinline preload="metadata"></video>
+              </div>
+            </div>
+            <div class="tutorial-content">
+              <h3>Mastering Portrait Retouching</h3>
+              <p>Professional techniques for natural-looking skin retouching</p>
+              <button class="btn btn-sm">Read More</button>
+            </div>
+          </div>
+
+          <div class="tutorial-card" data-tutorial="3">
+            <div class="tutorial-thumbnail">
+              <div class="video-placeholder">
+                <video src="Why Your Video Transitions SUCK (And How to FIX IT).mp4" controls playsinline preload="metadata"></video>
+              </div>
+            </div>
+            <div class="tutorial-content">
+              <h3>Dynamic Video Transitions</h3>
+              <p>Create smooth, engaging transitions for social media content</p>
+              <button class="btn btn-sm">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PAGE -->
+    <section id="services" class="page">
+      <div class="container">
+        <h2 class="section-title">What I Offer</h2>
+        <p class="section-subtitle">Professional editing services tailored to your needs</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="35" fill="none" stroke="#00F5D4" stroke-width="2"/>
+                <circle cx="40" cy="35" r="15" fill="#00F5D4" opacity="0.3"/>
+                <path d="M 20 60 Q 40 50 60 60" stroke="#00F5D4" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <h3>Photo Retouching</h3>
+            <ul class="service-features">
+              <li>Blemish removal</li>
+              <li>Color correction</li>
+              <li>Creative manipulation</li>
+              <li>Beauty retouching</li>
+            </ul>
+            <p class="service-price">Starting at $50</p>
+            <button class="btn btn-primary request-quote" data-service="Photo Retouching">Request Quote</button>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="20" width="60" height="40" rx="5" fill="none" stroke="#FF6700" stroke-width="2"/>
+                <polygon points="32,35 32,45 42,40" fill="#FF6700" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>Video Reel Editing</h3>
+            <ul class="service-features">
+              <li>Cutting &amp; transitions</li>
+              <li>Audio syncing</li>
+              <li>Social media formatting</li>
+              <li>Motion graphics</li>
+            </ul>
+            <p class="service-price">Starting at $100</p>
+            <button class="btn btn-primary request-quote" data-service="Video Reel Editing">Request Quote</button>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="colorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#00F5D4;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#FF6700;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#00F5D4;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <rect x="15" y="25" width="50" height="30" fill="url(#colorGrad)" opacity="0.6"/>
+                <circle cx="25" cy="55" r="5" fill="#00F5D4"/>
+                <circle cx="40" cy="55" r="5" fill="#FF6700"/>
+                <circle cx="55" cy="55" r="5" fill="#00F5D4"/>
+              </svg>
+            </div>
+            <h3>Cinematic Color Grading</h3>
+            <ul class="service-features">
+              <li>Film-style grading</li>
+              <li>LUT creation</li>
+              <li>Mood enhancement</li>
+              <li>Professional color science</li>
+            </ul>
+            <p class="service-price">Starting at $75</p>
+            <button class="btn btn-primary request-quote" data-service="Cinematic Color Grading">Request Quote</button>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="booking-form-section">
+          <h3 class="form-title">Get in Touch</h3>
+          <form id="contact-form" class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Photo Retouching">Photo Retouching</option>
+                <option value="Video Reel Editing">Video Reel Editing</option>
+                <option value="Cinematic Color Grading">Cinematic Color Grading</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="file-upload" class="file-upload-label">
+                <span class="file-upload-text">Upload sample files (optional)</span>
+                <input type="file" id="file-upload" name="file" accept="image/*,video/*" multiple>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
+          </form>
+          <div id="form-success" class="form-success hidden">
+            <p>Thanks! I'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+           <img src="TEJAS DHOPAT 786.jpg" alt="TEJAS DHOPAT">
+          </div>
+          <div class="about-text">
+            <h3>About Me</h3>
+            <p class="bio">Hi, I'm [TEJAS DHOPAT], a visual storyteller who loves turning pixels into emotion. With 5+ years of experience in photo and video editing, I specialize in creating cinematic visuals that captivate and inspire.</p>
+            <div class="social-links">
+              <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" class="social-icon" aria-label="YouTube">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+              <a href="https://behance.net" target="_blank" class="social-icon" aria-label="Behance">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 8h4a3 3 0 0 1 0 6H8V8z"></path>
+                  <path d="M8 14h5a3 3 0 0 1 0 6H8v-6z"></path>
+                  <path d="M14 7h6"></path>
+                  <circle cx="18" cy="14" r="3"></circle>
+                </svg>
+              </a>
+            </div>
+            <p class="contact-email">Email: <a href="mailto:hello@editverse.com">hello@editverse.com</a></p>
+            <a href="#services" class="btn btn-primary">View Services</a>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-section">
+          <h3 class="testimonials-title">Client Testimonials</h3>
+          <div class="testimonials-carousel">
+            <div class="carousel-container">
+              <div class="testimonial-card active">
+                <div class="stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="testimonial-quote">"EditVerse transformed my raw footage into stunning, professional content. The attention to detail is incredible!"</p>
+                <p class="testimonial-author">- Sarah Johnson</p>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="testimonial-quote">"Best color grading I've ever received. My videos now have that cinematic quality I've always wanted."</p>
+                <p class="testimonial-author">- Michael Chen</p>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="testimonial-quote">"Fast turnaround, excellent communication, and phenomenal results. Highly recommend!"</p>
+                <p class="testimonial-author">- Emily Rodriguez</p>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-btn prev" aria-label="Previous testimonial">&larr;</button>
+              <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+              </div>
+              <button class="carousel-btn next" aria-label="Next testimonial">&rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4 class="footer-logo">EditVerse</h4>
+          <p class="footer-tagline">Making Every Pixel Count</p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <div class="footer-social">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">YouTube</a>
+            <a href="https://behance.net" target="_blank" aria-label="Behance">Behance</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 EditVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Photo Modal -->
+  <div id="photo-modal" class="modal">
+    <div class="modal-close">&times;</div>
+    <div class="modal-content">
+      <div class="comparison-slider">
+        <div class="comparison-labels">
+          <span class="label-before">BEFORE</span>
+          <span class="label-after">AFTER</span>
+        </div>
+        <div class="slider-container">
+          <div class="image-before">
+            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" id="before-image">
+              <rect width="800" height="600" fill="#4a4a4a"/>
+              <text x="400" y="300" font-family="Inter" font-size="24" fill="#999" text-anchor="middle">Original Image</text>
+            </svg>
+          </div>
+          <div class="image-after">
+            <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" id="after-image">
+              <rect width="800" height="600" fill="#1a1a1a"/>
+              <circle cx="400" cy="250" r="120" fill="#00F5D4" opacity="0.4"/>
+              <text x="400" y="450" font-family="Inter" font-size="20" fill="#00F5D4" text-anchor="middle">Enhanced &amp; Retouched</text>
+            </svg>
+          </div>
+          <div class="slider-handle" id="slider-handle">
+            <div class="handle-line"></div>
+            <div class="handle-circle">
+              <span class="handle-arrows">&larr; &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-description">
+        <h3 id="modal-title">Fashion Portrait</h3>
+        <p id="modal-text">Skin smoothing, color correction, background replacement</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="modal">
+    <div class="modal-close">&times;</div>
+    <div class="modal-content">
+      <div class="video-comparison">
+        <div class="video-side">
+          <h4>Raw Footage</h4>
+          <div class="video-placeholder">
+           <video id="video-raw" src="before.mp4" controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+        <div class="video-side">
+          <h4>Final Edit</h4>
+          <div class="video-placeholder">
+           <video id="video-final" src="after.mp4" controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </div>
+      <!-- Additional Videos for Travel Montage -->
+      <div class="video-comparison">
+        <div class="video-side">
+          <h4>Raw Footage</h4>
+          <video id="user-video-a" src="video 2 before.mp4" controls playsinline preload="metadata" style="width:100%; border-radius:12px;"></video>
+        </div>
+        <div class="video-side">
+          <h4>color-grading</h4>
+          <video id="user-video-b" src="video 2 after.mp4" controls playsinline preload="metadata" style="width:100%; border-radius:12px;"></video>
+        </div>
+      </div>
+      <div class="video-controls">
+        <button class="video-play-btn" id="video-play">▶ Play Both</button>
+      </div>
+      <div class="modal-description">
+        <h3 id="video-modal-title">Travel Montage</h3>
+        <ul id="video-changes-list">
+          <li>Dynamic cuts synchronized to music</li>
+          <li>Color grading for cohesive look</li>
+          <li>Smooth transitions and speed ramps</li>
+          <li>Audio mixing and sound design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand Commercial Modal -->
+  <div id="brand-modal" class="modal">
+    <div class="modal-close">&times;</div>
+    <div class="modal-content">
+      <div class="video-comparison">
+        <div class="video-side">
+          <h4>Raw Footage</h4>
+          <div class="video-placeholder">
+           <video id="brand-video-raw" src="brand before.mp4" controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+        <div class="video-side">
+          <h4>Final Edit</h4>
+          <div class="video-placeholder">
+           <video id="brand-video-final" src="brand after.mp4" controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </div>
+      <div class="video-controls">
+        <button class="video-play-btn" id="brand-video-play">▶ Play Both</button>
+      </div>
+      <div class="modal-description">
+        <h3 id="brand-modal-title">Brand Commercial</h3>
+        <ul id="brand-changes-list">
+          <li>Professional pacing and storytelling</li>
+          <li>Motion graphics and text animations</li>
+          <li>Cinematic color grade</li>
+          <li>VFX additions and cleanup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutorial Detail Modal -->
+  <div id="tutorial-modal" class="modal">
+    <div class="modal-close">&times;</div>
+    <div class="modal-content tutorial-detail">
+      <h2 id="tutorial-title">Creating Cinematic Color Grades</h2>
+      <div class="tutorial-video">
+        <video src="Color Grade Any Video in 15 Minutes – DaVinci Resolve Masterclass _ Full Beginner Series – Part 5.mp4" controls playsinline preload="metadata"></video>
+      </div>
+      <div class="tutorial-steps" id="tutorial-steps">
+        <!-- Steps will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
